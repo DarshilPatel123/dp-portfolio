@@ -1,0 +1,62 @@
+:root {
+  --night: #111322;
+  --panel: #1d2035;
+  --ink: #f6f4ec;
+  --muted: #b8b8c9;
+  --line: #4e516c;
+  --lime: #d9ff58;
+  --pink: #ff6b9c;
+  --blue: #70d6ff;
+  --display: ui-serif, Georgia, Cambria, "Times New Roman", serif;
+  --body: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+body { min-width: 20rem; margin: 0; background: var(--night); color: var(--ink); font-family: var(--body); line-height: 1.5; }
+a { color: inherit; }
+button { font: inherit; }
+.skip-link { position: fixed; z-index: 10; top: 0.75rem; left: 0.75rem; padding: 0.7rem 1rem; transform: translateY(-200%); background: var(--lime); color: var(--night); }
+.skip-link:focus { transform: translateY(0); }
+.arcade-header, main { width: min(1120px, calc(100% - 3rem)); margin-inline: auto; }
+.arcade-header { display: flex; min-height: 5.75rem; align-items: center; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--line); }
+.brand { color: var(--lime); font-size: 1.2rem; font-weight: 850; letter-spacing: -0.07em; text-decoration: none; }
+.brand span { color: var(--pink); }
+.arcade-header p { margin: 0; color: var(--muted); font-size: 0.76rem; font-weight: 750; letter-spacing: 0.1em; text-transform: uppercase; }
+.classic-link { border: 1px solid var(--line); padding: 0.55rem 0.75rem; font-size: 0.82rem; font-weight: 700; text-decoration: none; }
+.classic-link:hover, .classic-link:focus-visible { border-color: var(--lime); color: var(--lime); }
+.arcade-hero { max-width: 49rem; padding-block: clamp(3.5rem, 8vw, 7rem) 2.5rem; }
+.eyebrow { margin: 0 0 1rem; color: var(--lime); font-size: 0.76rem; font-weight: 800; letter-spacing: 0.11em; text-transform: uppercase; }
+h1, h2, p { margin-top: 0; }
+h1, h2 { font-family: var(--display); font-weight: 500; letter-spacing: -0.055em; line-height: 0.95; text-wrap: balance; }
+h1 { max-width: 10ch; margin-bottom: 1.4rem; font-size: clamp(3.4rem, 8vw, 7rem); }
+h2 { margin-bottom: 1rem; font-size: clamp(2.25rem, 5vw, 4.3rem); }
+.arcade-hero > p:last-child { max-width: 42rem; color: var(--muted); font-size: 1.08rem; }
+.route-map { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: clamp(3rem, 7vw, 6rem); }
+.route-card { min-height: 11rem; padding: 1.25rem; border: 1px solid var(--line); background: var(--panel); color: var(--ink); text-align: left; cursor: pointer; transition: transform 160ms ease, border-color 160ms ease, background 160ms ease; }
+.route-card:hover, .route-card:focus-visible, .route-card.is-selected { border-color: var(--lime); background: #292d47; transform: translateY(-0.3rem); }
+.route-number { display: block; margin-bottom: 2rem; color: var(--lime); font-size: 0.76rem; font-weight: 800; }
+.route-card strong { display: block; font-family: var(--display); font-size: 1.65rem; font-weight: 500; letter-spacing: -0.045em; }
+.route-card small { display: block; margin-top: 0.35rem; color: var(--muted); font-size: 0.78rem; font-weight: 650; }
+.route-climb .route-number { color: var(--blue); }
+.route-signal .route-number { color: var(--pink); }
+.game-panel { padding: clamp(1.25rem, 4vw, 3rem); border: 1px solid var(--line); background: #171a2b; }
+.game-copy { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 2rem; align-items: end; margin-bottom: 1.75rem; }
+.game-copy .eyebrow { grid-column: 1 / -1; margin-bottom: -0.5rem; }
+.game-copy p:last-child { max-width: 34rem; margin: 0; color: var(--muted); }
+.canvas-wrap { position: relative; border: 1px solid var(--line); background: #0c0e19; }
+canvas { display: block; width: 100%; height: auto; touch-action: none; }
+.canvas-status { position: absolute; right: 1rem; bottom: 0.8rem; margin: 0; color: var(--ink); font-size: 0.78rem; font-weight: 750; text-shadow: 0 1px 5px #000; }
+.game-controls { display: grid; grid-template-columns: 1fr 1.5fr 1fr; max-width: 28rem; gap: 0.75rem; margin: 1.25rem auto 0; }
+.game-controls button { min-height: 3.5rem; border: 1px solid var(--ink); background: transparent; color: var(--ink); font-size: 1.35rem; font-weight: 800; cursor: pointer; }
+.game-controls button:hover, .game-controls button:focus-visible { background: var(--ink); color: var(--night); }
+.game-controls .action-control { border-color: var(--lime); background: var(--lime); color: var(--night); font-size: 0.95rem; }
+.game-controls .action-control:hover, .game-controls .action-control:focus-visible { background: #efffb0; }
+.keyboard-hint { margin: 0.9rem 0 0; color: var(--muted); text-align: center; font-size: 0.78rem; }
+.arcade-details { margin-block: clamp(3rem, 7vw, 6rem); padding: clamp(1.5rem, 5vw, 3.5rem); border: 1px solid var(--line); background: var(--lime); color: var(--night); }
+.arcade-details .eyebrow { color: #4c6600; }
+.arcade-details h2 { max-width: 13ch; }
+.arcade-details p:not(.eyebrow) { max-width: 38rem; }
+.arcade-details a { font-weight: 800; text-underline-offset: 0.25em; }
+:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
+@media (max-width: 700px) { .arcade-header, main { width: min(100% - 2rem, 1120px); } .arcade-header p { display: none; } .route-map { grid-template-columns: 1fr; } .route-card { min-height: 8rem; } .route-number { margin-bottom: 1rem; } .game-copy { display: block; } .game-copy .eyebrow { margin-bottom: 1rem; } }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; } .route-card:hover, .route-card:focus-visible, .route-card.is-selected { transform: none; } }

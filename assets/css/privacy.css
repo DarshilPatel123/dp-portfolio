@@ -1,0 +1,93 @@
+:root {
+  color-scheme: light dark;
+  --privacy-canvas: #e6edf5;
+  --privacy-card: #ffffff;
+  --privacy-heading: #0f2942;
+  --privacy-text: #334155;
+  --privacy-muted: #64748b;
+  --privacy-line: #d7e1ec;
+  --privacy-blue: #0ea5e9;
+  --privacy-orange: #f97316;
+}
+* { box-sizing: border-box; }
+
+body {
+  min-width: 20rem;
+  margin: 0;
+  background: radial-gradient(circle at 50% 8%, #fafbfd 0, var(--privacy-canvas) 72%);
+  color: var(--privacy-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.65;
+}
+
+main {
+  width: min(48rem, calc(100% - 2rem));
+  margin: clamp(1.5rem, 8vw, 4rem) auto;
+  padding: clamp(1.5rem, 6vw, 3.25rem);
+  border: 1px solid var(--privacy-line);
+  border-radius: 1.5rem;
+  background: var(--privacy-card);
+  box-shadow: 0 1.1rem 3.1rem rgb(15 41 66 / 12%);
+}
+
+h1, h2 { color: var(--privacy-heading); line-height: 1.22; }
+h1 { margin: 0; text-align: center; font-size: clamp(2rem, 7vw, 3rem); }
+h2 { margin: 2rem 0 0.55rem; font-size: 1.25rem; }
+p, ul { margin: 0.7rem 0; }
+ul { padding-left: 1.35rem; }
+
+.mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  margin-bottom: 0.7rem;
+  color: var(--privacy-heading);
+  font-size: clamp(1.25rem, 5vw, 1.9rem);
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.mark::before, .mark::after {
+  width: 2.35rem;
+  height: 0.3rem;
+  border-radius: 99rem;
+  content: "";
+}
+
+.mark::before { background: var(--privacy-blue); }
+.mark::after { background: var(--privacy-orange); }
+
+.updated { margin-top: 0.55rem; color: var(--privacy-muted); text-align: center; }
+
+.policy-notice {
+  margin: 1.75rem 0;
+  padding: 0.85rem 1rem;
+  border-left: 0.3rem solid var(--privacy-orange);
+  background: #fff7ed;
+  color: #7c2d12;
+  font-size: 0.92rem;
+}
+
+footer {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--privacy-line);
+  color: var(--privacy-muted);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --privacy-canvas: #090d16;
+    --privacy-card: #1e293b;
+    --privacy-heading: #f8fafc;
+    --privacy-text: #cbd5e1;
+    --privacy-muted: #94a3b8;
+    --privacy-line: #334155;
+  }
+
+  body { background: radial-gradient(circle at 50% 8%, #111a2e 0, var(--privacy-canvas) 72%); }
+  .policy-notice { background: #431407; color: #fed7aa; }
+}

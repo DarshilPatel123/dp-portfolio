@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="An original career arcade portfolio concept by Darshil Patel." />
+    <title>Career Arcade - Darshil Patel</title>
+    <link rel="stylesheet" href="../../assets/css/arcade.css" />
+    <link rel="stylesheet" href="../../assets/css/arcade-redesign.css" />
+    <script src="arcade.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#arcade-details">Skip the game to details</a>
+    <header class="arcade-header">
+      <a class="brand" href="../../index.html" aria-label="Return to normal portfolio">DP<span aria-hidden="true">.</span></a>
+      <p>Interactive Route Map</p>
+      <a class="classic-link" href="../../index.html">Classic view</a>
+    </header>
+
+    <main>
+      <section class="arcade-hero" aria-labelledby="arcade-title">
+        <p class="eyebrow">Choose a route</p>
+        <h1 id="arcade-title">A career map you can play through.</h1>
+        <p>
+          Choose a path, play a short challenge, and reveal a part of my portfolio. The classic portfolio is always available if you prefer a direct overview.
+        </p>
+      </section>
+
+      <section class="route-map" aria-label="Career Arcade routes">
+        <button class="route-card route-road is-selected" type="button" data-stage="road" aria-pressed="true">
+          <span class="route-number">01</span>
+          <strong>Roadline Run</strong>
+          <small>Current direction</small>
+        </button>
+        <button class="route-card route-climb" type="button" data-stage="climb" aria-pressed="false">
+          <span class="route-number">02</span>
+          <strong>Stack Shift</strong>
+          <small>Technical foundation</small>
+        </button>
+        <button class="route-card route-signal" type="button" data-stage="signal" aria-pressed="false">
+          <span class="route-number">03</span>
+          <strong>Signal Match</strong>
+          <small>Project collection</small>
+        </button>
+      </section>
+
+      <section class="game-panel" aria-labelledby="game-title">
+        <div class="game-copy">
+          <p class="eyebrow" data-stage-label>Roadline Run</p>
+          <h2 id="game-title" data-stage-title>Keep the route clear.</h2>
+          <p data-stage-instructions>Move between lanes and avoid blockers. Reach six markers to reveal the current-direction card.</p>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="arcade-canvas" width="720" height="420" aria-label="Roadline Run game. Use left and right controls to avoid blockers."></canvas>
+          <p class="canvas-status" data-game-status aria-live="polite">Choose Start to play.</p>
+        </div>
+        <div class="game-controls" aria-label="Game controls">
+          <button type="button" data-control="left" aria-label="Move left">&larr;</button>
+          <button type="button" data-control="action" class="action-control">Start</button>
+          <button type="button" data-control="right" aria-label="Move right">&rarr;</button>
+        </div>
+        <p class="keyboard-hint">Keyboard: Left/Right arrows. Space starts or confirms.</p>
+      </section>
+
+      <section id="arcade-details" class="arcade-details" tabindex="-1" aria-live="polite">
+        <p class="eyebrow" data-reveal-label>Current direction</p>
+        <h2 data-reveal-title>Software developer at Veloxcore.</h2>
+        <p data-reveal-copy>Darshil has been building professional software experience at Veloxcore since 2023.</p>
+        <a href="../../index.html">View every detail in the classic portfolio <span aria-hidden="true">&rarr;</span></a>
+      </section>
+    </main>
+  </body>
+</html>

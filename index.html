@@ -3,118 +3,154 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Darshil Patel — software developer portfolio." />
-    <title>Darshil Patel — Software Developer</title>
-    <link rel="stylesheet" href="assets/css/site.css" />
+    <meta name="description" content="Darshil Patel - software developer portfolio." />
+    <title>Darshil Patel - Software Developer</title>
+    <link rel="stylesheet" href="assets/css/main-portfolio.css" />
     <script src="assets/js/site.js" defer></script>
   </head>
-  <body>
+  <body class="portfolio-body">
     <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <header class="site-header" data-header>
-      <a class="brand" href="./" aria-label="Darshil Patel home">DP<span aria-hidden="true">.</span></a>
+    <header class="portfolio-header">
+      <a class="portfolio-brand" href="./" aria-label="Darshil Patel home">Darshil Patel<span>.</span></a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" data-nav-toggle>
         Menu
       </button>
-      <nav id="site-navigation" class="site-nav" aria-label="Primary navigation" data-nav>
-        <a href="#about">About</a>
+      <nav id="site-navigation" class="portfolio-nav" aria-label="Primary navigation" data-nav>
+        <a href="#about">Profile</a>
         <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
+        <a href="#capabilities">Toolkit</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <main id="main-content">
-      <section class="hero section-shell" aria-labelledby="hero-title">
-        <div class="hero-copy">
-          <p class="eyebrow">Software developer</p>
-          <h1 id="hero-title">I turn thoughtful ideas into dependable digital products.</h1>
-          <p class="hero-summary">
-            I am Darshil Patel, a software developer focused on clear experiences, practical problem-solving, and work that feels polished from the first interaction.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#projects">See new work</a>
-            <a class="button button-secondary" href="prototypes/workspace/">Try the workspace preview <span aria-hidden="true">→</span></a>
-          </div>
+    <main id="main-content" class="portfolio-main">
+      <section class="intro" aria-labelledby="intro-title">
+        <div>
+          <p class="section-label">Software developer</p>
+          <h1 id="intro-title" class="intro-title">I build clear,<br /><em>reliable software.</em></h1>
+          <p class="intro-summary">I am Darshil Patel, a Software Developer with a Computer Engineering background and a practical approach to solving problems through technology.</p>
+          <a class="primary-link" href="#projects">View selected projects</a>
         </div>
-        <aside class="hero-status" aria-label="Current status">
-          <div class="status-orb" aria-hidden="true"></div>
-          <p class="status-label">Currently building</p>
-          <p class="status-value">Software experiences<br />with intent.</p>
-          <div class="status-rule" aria-hidden="true"></div>
-          <p class="status-note">Veloxocre · 2023 — present</p>
+        <aside class="intro-note" aria-label="Current role">
+          <p class="section-label">Currently</p>
+          <h2>Veloxcore</h2>
+          <p>Software Developer &middot; 2023 &mdash; present</p>
         </aside>
       </section>
 
-      <section id="about" class="section-shell content-section split-section" aria-labelledby="about-title">
-        <div>
-          <p class="eyebrow">01 / About</p>
-          <h2 id="about-title">Build with purpose, explain with clarity.</h2>
-        </div>
-        <div class="body-copy">
-          <p>
-            I care about the details that make software feel considered: understandable flows, reliable behaviour, and interfaces that respect the person using them.
-          </p>
-          <p>
-            This portfolio is intentionally in progress. It will grow with new, relevant case studies rather than recycling older project work.
-          </p>
-        </div>
-      </section>
-
-      <section id="experience" class="section-shell content-section" aria-labelledby="experience-title">
+      <section id="about" class="portfolio-section" aria-labelledby="about-title">
         <div class="section-heading">
-          <p class="eyebrow">02 / Experience</p>
-          <h2 id="experience-title">Current chapter</h2>
+          <p class="section-label">01 / Profile</p>
+          <h2 id="about-title">A practical approach to building software.</h2>
         </div>
-        <article class="experience-card">
-          <div class="experience-date">2023 — present</div>
-          <div>
-            <h3>Veloxocre</h3>
-            <p>Professional experience details will be refined from the approved résumé and your review.</p>
-          </div>
-          <span class="card-marker" aria-hidden="true">↗</span>
-        </article>
+        <div class="profile-copy">
+          <p>I value clean, maintainable software, clear experiences, and the steady problem-solving that turns an idea into something useful.</p>
+          <dl class="profile-facts">
+            <div>
+              <dt>Current role</dt>
+              <dd>Software Developer at Veloxcore</dd>
+            </div>
+            <div>
+              <dt>Education</dt>
+              <dd>Computer Engineering, Government Engineering College, Gandhinagar</dd>
+            </div>
+            <div>
+              <dt>Focus</dt>
+              <dd>Clear, maintainable software and continuous learning</dd>
+            </div>
+          </dl>
+        </div>
       </section>
 
-      <section id="skills" class="section-shell content-section" aria-labelledby="skills-title">
+      <section id="experience" class="portfolio-section" aria-labelledby="experience-title">
         <div class="section-heading">
-          <p class="eyebrow">03 / Strengths</p>
-          <h2 id="skills-title">How I approach software.</h2>
+          <p class="section-label">02 / Path so far</p>
+          <h2 id="experience-title">Learning through work and engineering study.</h2>
         </div>
-        <ul class="skill-grid" aria-label="Professional strengths">
-          <li><span>01</span> Product-minded implementation</li>
-          <li><span>02</span> Responsive interface thinking</li>
-          <li><span>03</span> Clear, maintainable systems</li>
-          <li><span>04</span> Iteration guided by feedback</li>
-        </ul>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-date">2023 &mdash; present</div>
+            <div class="timeline-role">Software Developer<span>Veloxcore</span></div>
+            <p class="timeline-description">I work on creating clean, maintainable software while continuously learning and improving my problem-solving skills.</p>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">2019 &mdash; 2023</div>
+            <div class="timeline-role">Computer Engineering<span>Government Engineering College, Gandhinagar</span></div>
+            <p class="timeline-description">A foundation in computer engineering that supports a practical approach to building and understanding software.</p>
+          </li>
+        </ol>
       </section>
 
-      <section id="projects" class="section-shell content-section" aria-labelledby="projects-title">
+      <section id="capabilities" class="portfolio-section" aria-labelledby="capabilities-title">
         <div class="section-heading">
-          <p class="eyebrow">04 / Selected work</p>
-          <h2 id="projects-title">New work is in the making.</h2>
+          <p class="section-label">03 / Toolkit</p>
+          <h2 id="capabilities-title">A practical toolkit, used with care.</h2>
         </div>
-        <div class="project-empty-state">
-          <p class="project-kicker">Portfolio development log</p>
-          <p>
-            The projects shown here will be new, carefully documented work with a clear problem, solution, process, and outcome.
-          </p>
-          <span>First case study in progress</span>
+        <div class="toolkit" aria-label="Technical capabilities">
+          <p><span>For the web</span>HTML, CSS, JavaScript and TypeScript</p>
+          <p><span>For applications</span>Python, PHP, .NET and C#</p>
+          <p><span>For data</span>Microsoft SQL Server</p>
+          <p><span>In practice</span>Problem-solving, adaptability and a willingness to learn</p>
         </div>
       </section>
 
-      <section id="contact" class="section-shell contact-section" aria-labelledby="contact-title">
-        <p class="eyebrow">05 / Contact</p>
-        <h2 id="contact-title">Let’s build something useful.</h2>
-        <p>Contact links will be added after you approve the public details.</p>
-        <a class="text-link" href="#main-content">Back to top <span aria-hidden="true">↑</span></a>
+      <section id="projects" class="portfolio-section" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="section-label">04 / Selected work</p>
+          <h2 id="projects-title">Projects built around real user tasks.</h2>
+        </div>
+        <div class="project-list">
+          <article class="project">
+            <div class="project-number">01</div>
+            <div>
+              <p class="project-kind">Web application</p>
+              <h3>E-Commerce Website</h3>
+            </div>
+            <div class="project-details">
+              <p>A marketplace-style web application where sellers list products and users can browse and purchase products based on their requirements.</p>
+              <ul class="technology-list" aria-label="E-Commerce Website technologies"><li>Java Servlet</li><li>JDBC</li><li>JSP</li></ul>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project-number">02</div>
+            <div>
+              <p class="project-kind">Management system</p>
+              <h3>Exam &amp; Quiz Management System</h3>
+            </div>
+            <div class="project-details">
+              <p>An admin-led quiz system for assigning multiple-choice questions, managing student access, and allowing students to complete their assigned questions.</p>
+              <ul class="technology-list" aria-label="Exam and Quiz Management System technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>PHP</li></ul>
+            </div>
+          </article>
+          <article class="project">
+            <div class="project-number">03</div>
+            <div>
+              <p class="project-kind">Interactive interface</p>
+              <h3>Basic Music Player</h3>
+            </div>
+            <div class="project-details">
+              <p>A browser-based player for a predefined song list, with play, pause, next-track, and previous-track controls.</p>
+              <ul class="technology-list" aria-label="Basic Music Player technologies"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contact" class="contact-section" aria-labelledby="contact-title">
+        <p class="section-label">05 / Contact</p>
+        <div class="contact-main">
+          <h2 id="contact-title">Let&apos;s talk about the next problem to solve.</h2>
+          <p>For professional enquiries, you can reach me directly by email.</p>
+          <a class="contact-email" href="mailto:dgp76210@gmail.com">dgp76210@gmail.com</a>
+        </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p>© <span data-current-year></span> Darshil Patel</p>
-      <p>Designed and built from scratch.</p>
+    <footer class="portfolio-footer">
+      <p>&copy; <span data-current-year></span> Darshil Patel</p>
+      <a class="top-link" href="#main-content">Back to top <span aria-hidden="true">&uarr;</span></a>
     </footer>
   </body>
 </html>
