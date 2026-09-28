@@ -30,7 +30,7 @@ h1, h2, h3 { text-wrap: balance; }
 
 .intro { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(17rem, 0.7fr); gap: clamp(2.5rem, 8vw, 8rem); min-height: min(44rem, calc(100vh - 5.5rem)); align-items: end; padding-block: clamp(5rem, 10vw, 9rem) 5.5rem; }
 .section-label { margin-bottom: 1.2rem; color: var(--accent); font-size: 0.76rem; font-weight: 850; letter-spacing: 0.11em; text-transform: uppercase; }
-.intro-title { max-width: 10ch; margin-bottom: 1.6rem; font-family: var(--serif); font-size: clamp(4rem, 9vw, 8.5rem); font-weight: 500; letter-spacing: -0.07em; line-height: 0.88; }
+.intro-title { max-width: none; margin-bottom: 1.6rem; font-family: var(--serif); font-size: clamp(3rem, 5vw, 5.5rem); font-weight: 500; letter-spacing: -0.07em; line-height: 0.92; white-space: nowrap; }
 .intro-title em { color: var(--deep); font-style: italic; }
 .intro-summary { max-width: 39rem; margin-bottom: 2.1rem; color: var(--muted); font-size: clamp(1.05rem, 1.8vw, 1.25rem); }
 .primary-link { display: inline-flex; min-height: 3.1rem; align-items: center; padding: 0.8rem 1rem; background: var(--deep); color: #fff; font-size: 0.84rem; font-weight: 800; text-decoration: none; }
@@ -96,6 +96,7 @@ h1, h2, h3 { text-wrap: balance; }
   .portfolio-nav a:last-child { border-bottom: 0; }
   .intro, .profile-copy, .timeline-item, .project, .contact-section { grid-template-columns: 1fr; }
   .intro { min-height: auto; padding-block: 4.5rem; }
+  .intro-title { white-space: normal; }
   .section-heading { grid-template-columns: 1fr; gap: 0.7rem; }
   .profile-copy { margin-left: 0; }
   .timeline-item, .project { gap: 0.8rem; }
