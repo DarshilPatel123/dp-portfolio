@@ -30,6 +30,7 @@ function expectDocumentBasics(source, name) {
 const home = read('index.html');
 const arcade = read('prototypes/career-arcade/index.html');
 const privacy = read('privacy/dot-and-box/index.html');
+const teenPrivacy = read('privacy/teen-do-panch/index.html');
 const mainPortfolioCss = read('assets/css/main-portfolio.css');
 const arcadeCss = read('assets/css/arcade.css');
 const arcadeRedesignCss = read('assets/css/arcade-redesign.css');
@@ -40,6 +41,7 @@ const arcadeJs = read('prototypes/career-arcade/arcade.js');
 expectDocumentBasics(home, 'Homepage');
 expectDocumentBasics(arcade, 'Career Arcade prototype');
 expectDocumentBasics(privacy, 'Privacy page');
+expectDocumentBasics(teenPrivacy, 'Teen Do Panch privacy page');
 
 expect(home.includes('href="#main-content"'), 'Homepage must provide a skip link.');
 expect(home.includes('<main id="main-content"'), 'Homepage must provide a main content landmark.');
@@ -60,10 +62,14 @@ expect(arcadeCss.includes('prefers-reduced-motion'), 'Career Arcade styling must
 expect(arcadeJs.includes('requestAnimationFrame'), 'Career Arcade must render its interactive canvas.');
 expect(arcade.includes('href="../../index.html"'), 'Career Arcade return links must point directly to the normal homepage file.');
 
-expect(!home.includes('privacy/dot-and-box'), 'Homepage must not link or refer to the privacy route.');
+expect(!home.includes('privacy/'), 'Homepage must not link or refer to game privacy routes.');
 expect(!/<a\b[^>]*href=["'](?:\.\.?\/|\/|#)/i.test(privacy), 'Privacy page must not link to the portfolio or another page.');
+expect(!/<a\b[^>]*href=["'](?:\.\.?\/|\/|#)/i.test(teenPrivacy), 'Teen Do Panch privacy page must not link to the portfolio or another page.');
 expect(privacy.includes('Silent Gaming'), 'Privacy page must identify the confirmed Google Play developer.');
 expect(privacy.includes('mailto:dgp76210@gmail.com'), 'Privacy page must provide the confirmed privacy contact.');
+expect(teenPrivacy.includes('Silent Gaming'), 'Teen Do Panch privacy page must identify the Google Play developer.');
+expect(teenPrivacy.includes('mailto:dgp76210@gmail.com'), 'Teen Do Panch privacy page must provide the privacy contact.');
+expect(teenPrivacy.includes('Effective date: 15 October 2026'), 'Teen Do Panch privacy page must show the reviewed effective date.');
 expect(!privacy.includes('REPLACE_WITH_AN_ACTIVELY_MONITORED_PRIVACY_EMAIL_BEFORE_PUBLISHING'), 'Privacy page must not retain an unresolved privacy-contact placeholder.');
 
 expectLocalFile('assets/css/main-portfolio.css');
@@ -76,6 +82,7 @@ const sourceFiles = [
   ['index.html', home],
   ['prototypes/career-arcade/index.html', arcade],
   ['privacy/dot-and-box/index.html', privacy],
+  ['privacy/teen-do-panch/index.html', teenPrivacy],
   ['assets/css/main-portfolio.css', mainPortfolioCss],
   ['assets/css/arcade.css', arcadeCss],
   ['assets/css/arcade-redesign.css', arcadeRedesignCss],
